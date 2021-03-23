@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+  <!-- 1. 使用property初始化Bean属性 -->
+  <bean id="a" class="com.lyf.spring.config.InstanceA">
+	  <property name="b" ref="b"></property>
+  </bean>
+
+
+  <bean id="b" class="com.lyf.spring.config.InstanceB">
+	  <property name="a" ref="a"></property>
+  </bean>
+</beans>
